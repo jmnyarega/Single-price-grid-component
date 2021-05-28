@@ -93,14 +93,12 @@ body {
   background-color: white;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 2rem;
-  width: 38.5rem;
 }
 
 .subscribe--card {
   background-color: var(--cyan);
   padding: 2rem;
   color: white;
-  width: 19.25rem;
 }
 
 .why--card {
@@ -108,7 +106,6 @@ body {
   padding: 2rem;
   color: white;
   border-radius: 0 0 0.5rem 0.5rem;
-  width: 19.25rem;
 }
 
 .subscribe__button:active,
@@ -161,5 +158,17 @@ body {
 
   .why--card {
     border-radius: 0 0 0.5rem 0;
+  }
+
+  .join--card {
+    width: 38.5rem;
+  }
+
+  .subscribe--card {
+    width: 19.25rem;
+  }
+
+  .why--card {
+    width: 19.25rem;
   }
 }
