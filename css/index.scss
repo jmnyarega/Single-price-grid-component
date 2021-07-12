@@ -1,0 +1,180 @@
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$grayish-blue: hsl(218, 22%, 67%);
+$light-gray: hsl(230, 8%, 50%);
+$v-light-gray: hsl(179, 47%, 52%);
+$white: hsl(0, 100%, 100%);
+$box-shadow: rgba(0, 0, 0, 0.1);
+
+$spacer: 1.5rem;
+$spacer-sm: 0.5rem;
+$border-radius: 0.8rem;
+
+$font-base: 1rem;
+$font-h3: 1.25rem;
+$font-h2: 1.5rem;
+$font-h1: 2rem;
+
+$text-width: 55ch;
+
+$ff-default: "Karla", sans-serif;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: $font-base;
+  font-family: $ff-default;
+  background-color: $grayish-blue;
+
+  max-width: 120em;
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+
+  display: grid;
+  place-items: center;
+}
+
+main {
+  @media (min-width: 55em) {
+    display: grid;
+    grid-template-areas: "a a" "b c";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.title {
+  line-height: 1;
+  font-size: $font-h2;
+  font-weight: bold;
+  &--sm {
+    line-height: 1;
+    font-size: $font-h3;
+  }
+}
+
+.join {
+  background-color: $white;
+  border-radius: $border-radius $border-radius 0 0;
+  padding: $spacer * 1.5
+           $spacer
+           $spacer * 1.5
+           $spacer * 1.5;
+  color: $light-gray;
+
+  grid-area: a;
+
+  &__title {
+    color: $cyan;
+    margin-bottom: $spacer;
+  }
+
+  &__sub-title {
+    color: $bright-yellow;
+    margin-bottom: $spacer-sm;
+  }
+
+  &__para {
+    max-width: $text-width;
+  }
+}
+
+.subscribe {
+  background-color: $cyan;
+  color: $white;
+  padding: $spacer * 1.5;
+  grid-area: b;
+
+  @media (min-width: 55em) {
+    border-radius: 0 0 0 $border-radius;
+  }
+
+  &__title {
+    margin-bottom: $spacer;
+  }
+
+  &__pricing {
+    display: flex;
+    align-items: center;
+    gap: $spacer-sm;
+  }
+
+  &__amount {
+    font-size: $font-h1;
+    font-weight: 700;
+  }
+
+  &__cycle {
+    opacity: 0.8;
+  }
+
+  &__para {
+    margin-bottom: $spacer-sm;
+  }
+
+  &__button {
+    margin-top: $spacer;
+    width: 100%;
+    display: inline-block;
+    font-weight: bold;
+    font-size: $font-h3;
+    text-align: center;
+  }
+}
+
+.why {
+  border-radius: 0 0 $border-radius $border-radius;
+  background-color: $v-light-gray;
+  padding: $spacer * 1.5;
+  color: $white;
+  grid-area: c;
+
+  @media (min-width: 55em) {
+    border-radius: 0 0 $border-radius 0;
+  }
+
+  &__title {
+    margin-bottom: $spacer-sm;
+  }
+
+  &__list {
+    list-style: none;
+    opacity: 0.8;
+    line-height: 1;
+  }
+}
+
+
+.button {
+  outline: none;
+  background-color: $bright-yellow;
+  border: 2px solid $bright-yellow;
+
+  padding: 0.5em 1.5em;
+
+  border-radius: $border-radius - 0.5rem;
+  box-shadow: 0 0 10px 2px $box-shadow;
+  transition: all 350ms linear;
+
+  &:active, &:link, &:hover, &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover, &:focus {
+    border: 2px dotted;
+    box-shadow: 0 0 5px 0 $box-shadow;
+    opacity: 0.7;
+  }
+}
