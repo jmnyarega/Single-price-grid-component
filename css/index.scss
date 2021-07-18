@@ -3,6 +3,7 @@ $bright-yellow: hsl(71, 73%, 54%);
 $grayish-blue: hsl(218, 22%, 67%);
 $light-gray: hsl(230, 8%, 50%);
 $v-light-gray: hsl(179, 47%, 52%);
+$bg-gray: hsl(206, 47%, 93%);
 $white: hsl(0, 100%, 100%);
 $box-shadow: rgba(0, 0, 0, 0.1);
 
@@ -35,7 +36,7 @@ html {
 body {
   font-size: $font-base;
   font-family: $ff-default;
-  background-color: $grayish-blue;
+  background-color: $bg-gray;
 
   max-width: 120em;
   min-height: 100vh;
